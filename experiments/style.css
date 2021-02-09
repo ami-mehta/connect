@@ -1,0 +1,15 @@
+.paragraphs {
+  color: red;
+}
+
+#my-id-lol {
+  font-size: 24px;
+  color: pink;
+  position: sticky;
+  top: 0;
+}
+
+p {
+  text-decoration: underline;
+  color: blue;
+}
