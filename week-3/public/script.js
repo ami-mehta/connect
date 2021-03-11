@@ -1,8 +1,10 @@
+//Form Validation
 function validate() {
   if (document.form.q1.value == "") {
     let element = document.getElementById("q1-warning");
     element.style.display = "block";
 
+    //ScrollIntoView
     document.getElementById("q1-title").scrollIntoView({ behavior: "smooth" });
     return false;
   } else if (!document.getElementById("q2o2").checked) {

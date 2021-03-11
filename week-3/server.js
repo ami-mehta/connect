@@ -35,7 +35,7 @@ app.get("/search", function (req, res) {
   console.log("Search for: " + req.query.q);
   db.find({ text: req.query.q }, function (err, docs) {
     var dataWrapper = { data: docs };
-    res.render("outputtemplate.ejs", dataWrapper);
+    res.render("individual.ejs", dataWrapper);
   });
 });
 
@@ -55,7 +55,7 @@ app.post("/formdata", function (req, res) {
   db.insert(dataToSave, function (err, newDoc) {
     db.find({}, function (err, docs) {
       var dataWrapper = { data: docs };
-      res.render("outputtemplate.ejs", dataWrapper);
+      res.render("individual.ejs", dataWrapper);
     });
     console.log(newDoc);
     // res.send("Data Saved: " + newDoc);
