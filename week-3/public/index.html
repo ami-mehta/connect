@@ -1,0 +1,133 @@
+<html>
+  <head>
+    <link rel="stylesheet" href="style.css" />
+    <title>Curmudgeons Anonymous</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@300&display=swap"
+      rel="stylesheet"
+    />
+    <script src="script.js"></script>
+  </head>
+
+  <body>
+    <h1 id="title">Curmudgeons Anonymous™</h1>
+    <p id="intro">
+      Are you a curmudgeon?
+      <br />
+    </p>
+    <p id="subintro">
+      /kərˈməjən/ | <i>noun</i>
+      <br />
+      A crusty, ill-tempered person.
+      <br />
+    </p>
+
+    <p id="intro">
+      Join CA and give vent to your feelings in cyberspace.
+      <br />
+      <br />
+      Fill out the complaint form and CA will send you a personalized care
+      package.
+      <br />
+      <br />
+      All grumps are welcome.
+      <br />
+    </p>
+    <form
+      name="form"
+      class="form-as"
+      method="POST"
+      action="/formdata"
+      onsubmit="return(validate());"
+    >
+      <h3 id="q1-title" class="form-qs">How cranky are you?</h3>
+      <input
+        onclick="q1RemoveWarning()"
+        type="radio"
+        id="q1o1"
+        name="q1"
+        value="Extremely Hangry"
+      />
+      <label for="q1o1"> Extremely Hangry</label><br />
+      <input
+        onclick="q1RemoveWarning()"
+        type="radio"
+        id="q1o2"
+        name="q1"
+        value="Highly Irritated"
+      />
+      <label for="q1o2"> Highly Irritated</label><br />
+      <input
+        onclick="q1RemoveWarning()"
+        type="radio"
+        id="q1o3"
+        name="q1"
+        value="Moderately Grumpy"
+      />
+      <label for="q1o3"> Moderately Grumpy</label><br />
+      <p id="q1-warning" class="warning">Try Again</p>
+
+      <h3 id="q2-title" class="form-qs">What's bothering you?</h3>
+      <input
+        onclick="q2RemoveWarning()"
+        type="checkbox"
+        id="q2o2"
+        name="q2"
+        value="Everything"
+      />
+      <label for="q2o2"> Everything</label><br />
+      <p id="q2-warning" class="warning">Try Again</p>
+
+      <h3 id="q3-title" class="form-qs">"I wish I could..."</h3>
+      <select name="selectlist">
+        <option value="Move to Mars">Move to Mars</option>
+        <option value="Go Off the Grid">Go Off the Gid</option>
+        <option value="Teleport to Tahiti">Teleport to Tahiti</option>
+      </select>
+      <p id="q3-warning" class="warning">Try Again</p>
+
+      <h3 id="q4-title" class="form-qs">"I could use a..."</h3>
+      <input
+        onclick="q4RemoveWarning()"
+        type="radio"
+        id="q4o1"
+        name="q4"
+        value="Hug"
+      />
+      <label for="q4o1"> Hug</label><br />
+      <input
+        onclick="q4RemoveWarning()"
+        type="radio"
+        id="q4o2"
+        name="q4"
+        value="Time-Travelling Machine"
+      />
+      <label for="q4o2"> Time-Travelling Machine</label><br />
+      <input
+        onclick="q4RemoveWarning()"
+        type="radio"
+        id="q4o3"
+        name="q4"
+        value="Vacation"
+      />
+      <label for="q4o3"> Vacation</label><br />
+      <p id="q4-warning" class="warning">Try Again</p>
+
+      <input type="submit" name="submit" value="Submit" />
+
+      <input type="reset" name="resetbutton" value="Reset" />
+    </form>
+    <p id="notice">
+      *This site is fictional. The trademark is fake. CA does not guarantee that
+      it can cure you of any curmudgeon tendencies.
+      <hr />
+      <!-- <div class="search"> -->
+        <form method="GET" action="/search">
+          <input type="text" name="q">
+          <input type="submit" value="Search">
+        </form>
+      <!-- </div> -->
+    </p>
+  </body>
+</html>

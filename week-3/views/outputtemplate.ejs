@@ -1,0 +1,16 @@
+<html>
+  <head>
+    <link rel="stylesheet" href="style.css" />
+    <title>Curmudgeons Anonymous</title>
+    <body>
+      <% if (data.length > 0) { for (var i = 0; i < data.length; i++) { %>
+      <div class="dataout" id="dataout<%= i %>">
+        <a href="/displayrecord?_id=<%= data[i]._id%>">
+          <%= data[i].answer1 %> <%= data[i].answer2 %> <%= data[i].answer3 %>
+          <%= data[i].answer4 %>
+        </a>
+      </div>
+      <% }} %>
+    </body>
+  </head>
+</html>
