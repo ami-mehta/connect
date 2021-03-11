@@ -25,7 +25,7 @@ app.get("/", function (req, res) {
 app.get("/displayrecord", function (req, res) {
   db.find({ _id: req.query._id }, function (err, docs) {
     var dataWrapper = { data: docs[0] };
-    res.render("individual.ejs", dataWrapper);
+    res.render("outputtemplate.ejs", dataWrapper);
   });
 });
 
@@ -35,7 +35,7 @@ app.get("/search", function (req, res) {
   console.log("Search for: " + req.query.q);
   db.find({ text: req.query.q }, function (err, docs) {
     var dataWrapper = { data: docs };
-    res.render("individual.ejs", dataWrapper);
+    res.render("outputtemplate.ejs", dataWrapper);
   });
 });
 
