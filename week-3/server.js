@@ -7,9 +7,6 @@ var express = require("express");
 var bodyParser = require("body-parser");
 var app = express();
 
-// //AJAX
-// fs = require('fs');
-
 //Instantiate BodyParser
 var urlencodedBodyParser = bodyParser.urlencoded({ extended: true });
 app.use(urlencodedBodyParser);
@@ -39,17 +36,6 @@ app.get("/search", function (req, res) {
   db.find({ text: req.query.q }, function (err, docs) {
     var dataWrapper = { data: docs };
     res.render("outputtemplate.ejs", dataWrapper);
-  });
-});
-
-// AJAX
-app.get("/readfile", function (req, res) {
-  fs.readFile("ajax_example.txt", "utf8", function (err, data) {
-    if (err) {
-      return console.log(err);
-    }
-    console.log(data);
-    res.send(data);
   });
 });
 
