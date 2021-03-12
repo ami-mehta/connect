@@ -33,6 +33,7 @@ app.get("/displayrecord", function (req, res) {
 app.get("/search", function (req, res) {
   // /search?q=text to search for
   console.log("Search for: " + req.query.q);
+  //Search - Add reg ex here
   db.find({ text: req.query.q }, function (err, docs) {
     var dataWrapper = { data: docs };
     res.render("outputtemplate.ejs", dataWrapper);
